@@ -131,7 +131,7 @@ ul {
 }
 
 .address-contact-list {
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   padding-left: 0;
   display: flex;
   margin: auto;
@@ -143,6 +143,7 @@ ul {
 }
 
 .address-contact-link {
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -330,6 +331,7 @@ ul {
 }
 
 .links {
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -383,6 +385,7 @@ ul {
 }
 
 .portfolio-list {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   display: flex;
   flex-wrap: wrap;
   column-gap: 24px;
@@ -392,7 +395,12 @@ ul {
 }
 
 .photo-images {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   width: calc((100% - 48px) / 3);
+}
+
+.photo-images:hover {
+  transform: translateY(0%);
 }
 
 .photo-images > img {
@@ -407,6 +415,26 @@ ul {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+
+.container-images {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-hover {
+  position: absolute;
+  top: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  padding: 40px 32px;
+  background-color: #4d5ae5;
+  height: 100%; 
+  width: 100%;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 .main-portfolio-title {
@@ -430,28 +458,7 @@ ul {
   background-color: #fff;
 }
 
-.overflow-text {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  font-weight: 400;
-  padding: 40px 32px;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #f4f4fd;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #4d5ae5;
-  transform: translateX(-100%);
-  transition: transform 250ms ease-in-out;
-  height: 300px;
-}
-
-.photo-images-overflow:hover .overflow-text {
+.container-images:hover .text-hover {
   transform: translateX(0);
 }
 
