@@ -159,6 +159,7 @@ ul {
 }
 
 .section-title {
+  margin: 0 auto;
   max-width: 1440px;
   background-image: linear-gradient(
       to bottom,
